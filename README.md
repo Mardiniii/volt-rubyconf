@@ -31,11 +31,11 @@ BROWSER=firefox bundle exec rspec spec/app/main/integration/chat_integration_spe
 ```
 ### Mensaje de error para validaciones
 ```bash
-BROWSER=firefox bundle exec rspec spec/app/main/integration/chat_integration_spec.rb:33
+BROWSER=firefox bundle exec rspec spec/app/main/integration/chat_integration_spec.rb:34
 ```
 ### links y mensajes en múltiples chats
 ```bash
-BROWSER=firefox bundle exec rspec spec/app/main/integration/chat_integration_spec.rb:42
+BROWSER=firefox bundle exec rspec spec/app/main/integration/chat_integration_spec.rb:43
 ```
 ## Ayuda Adicional
 
