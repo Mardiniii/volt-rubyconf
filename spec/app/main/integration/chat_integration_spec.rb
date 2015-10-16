@@ -29,6 +29,15 @@ describe 'chat', type: :feature do
         expect(page).to have_content (/#{juan[:name]}(.*?)#{message}/)
       end
     end
+
+    it 'allows only logged in user to see messages' do
+      find('.dropdown-toggle').click
+      click_link 'Logout'
+
+      visit '/chat'
+
+      expect(page).to have_content 'Please Login'
+    end
   end
 
   describe 'message validations' do
