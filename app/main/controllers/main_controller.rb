@@ -21,8 +21,11 @@ module Main
       end
 
       def send_message
-        store.messages.create(body: page._message_body)
-        reset_message
+        current_chat.messages.create(body: page._message_body)
+          .then { reset_message }
+          .fail do |errors|
+            errors.each { |k, v| flash._errors << "#{k}: #{v}"}
+          end
       end
 
     # The main template contains a #template binding that shows another

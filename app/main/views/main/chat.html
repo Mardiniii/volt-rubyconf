@@ -12,8 +12,6 @@
   {{ store.messages.reverse.each do |message| }}
     <div>
       <:message user="{{ message.user.name }}" message="{{ message.body }}" />
-      <strong>{{ message.user.name }} :</strong>
-      <span>{{ message.body }}</span>
     </div>
   {{ end }}
 
