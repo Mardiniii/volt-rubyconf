@@ -9,6 +9,9 @@ module Main
       # Add code for when the about view is loaded
     end
 
+    def chat
+    end
+
     private
 
     # The main template contains a #template binding that shows another
