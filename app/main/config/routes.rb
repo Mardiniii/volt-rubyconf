@@ -12,3 +12,5 @@ client '/account', component: 'user_templates', controller: 'account', action: '
 # The main route, this should be last. It will match any params not
 # previously matched.
 client '/', {}
+
+client '/chat', action: 'chat'
