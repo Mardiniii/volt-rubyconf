@@ -11,7 +11,14 @@
 
   {{ store.messages.reverse.each do |message| }}
     <div>
+      <:message user="{{ message.user.name }}" message="{{ message.body }}" />
       <strong>{{ message.user.name }} :</strong>
       <span>{{ message.body }}</span>
     </div>
   {{ end }}
+
+<:Message>
+  <div>
+    <strong>{{ attrs.user }} :</strong>
+    <span>{{ attrs.message }}</span>
+  </div>
