@@ -10,9 +10,18 @@ module Main
     end
 
     def chat
+      reset_message
     end
 
     private
+      def reset_message
+        page._message_body = ''
+      end
+
+      def send_message
+        store.messages.create(body: page._message_body)
+        reset_message
+      end
 
     # The main template contains a #template binding that shows another
     # template.  This is the path to that template.  It may change based
