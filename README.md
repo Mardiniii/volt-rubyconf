@@ -25,15 +25,15 @@ Para cada uno de los features de nuestro chat correr los siguientes comandos:
 
 **NOTA** debes tener firefox instalado para correr los tests
 
-### Ingreso de mensajes por usuario
+### Ingreso de mensajes por usuario: CHECKPOINT 0
 ```bash
-BROWSER=firefox bundle exec rspec spec/app/main/integration/chat_integration_spec.rb:18
+BROWSER=firefox bundle exec rspec spec/app/main/0ntegration/chat_integration_spec.rb:18
 ```
-### Mensaje de error para validaciones
+### Mensaje de error para validaciones: CHECKPOINT 1
 ```bash
 BROWSER=firefox bundle exec rspec spec/app/main/integration/chat_integration_spec.rb:43
 ```
-### links y mensajes en múltiples chats
+### links y mensajes en múltiples chats: CHECKPOINT 2
 ```bash
 BROWSER=firefox bundle exec rspec spec/app/main/integration/chat_integration_spec.rb:52
 ```
