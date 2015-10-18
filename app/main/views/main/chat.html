@@ -3,13 +3,19 @@
 
 <:Body>
   <h1>Chat</h1>
+  {{ store.chats.each_with_index do |chat, index| }}
+    <div>
+      {{ chat.name }} |
+    <a e-click="params._index = index">Join Chat</a>
+    </div>
+  {{ end }}
 
   <form e-submit="send_message">
     <label>Message</label>
     <input type="text" value="{{ page._message_body }}">
   </form>
 
-  {{ store.messages.reverse.each do |message| }}
+  {{ current_chat.messages.reverse.each do |message| }}
     <div>
       <:message user="{{ message.user.name }}" message="{{ message.body }}" />
     </div>
