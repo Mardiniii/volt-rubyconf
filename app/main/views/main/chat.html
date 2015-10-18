@@ -5,8 +5,8 @@
   <h1>Chat</h1>
   {{ store.chats.each_with_index do |chat, index| }}
     <div>
-      {{ chat.name }} |
-    <a e-click="params._index = index">Join Chat</a>
+      {{ chat._name }} |
+    <a href="{{ url_with(action: 'chat', index: index) }}">Join Chat</a>
     </div>
   {{ end }}
 
