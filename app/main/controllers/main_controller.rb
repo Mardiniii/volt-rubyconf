@@ -16,6 +16,11 @@ module Main
     end
 
     private
+      def current_chat
+        current_index = (params._index) || 0).to_i
+        store.chats[current_index]
+      end
+
       def reset_message
         page._message_body = ''
       end
